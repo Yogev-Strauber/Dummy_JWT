@@ -1,5 +1,5 @@
 import express from "express";
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { DEMO_USER, JWT_SECRET } from "./auth/demoCreds";
 import { auth } from "./auth/helpers";
 
