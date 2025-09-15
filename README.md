@@ -57,6 +57,7 @@ password = pass123
 
 ### 2. Add this Pre-request Script at collection level:
 
+```
 pm.sendRequest({
   url: pm.collectionVariables.get("baseUrl") + "/auth/login",
   method: "POST",
@@ -74,7 +75,7 @@ pm.sendRequest({
     pm.collectionVariables.set("jwt", token);
   }
 });
-
+```
 Use Authorization: Bearer {{jwt}} in your requests.
 Now Postman will auto-fetch a fresh token before every call.
 
