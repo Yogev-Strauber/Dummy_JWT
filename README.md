@@ -83,18 +83,7 @@ Now Postman will auto-fetch a fresh token before every call.
 
 ## Architecture (High-Level)
 
-+-------------+        POST /auth/login        +-------------+
-|             | -----------------------------> |             |
-|   Client    |                                |   Server    |
-| (Postman)   | <----------------------------- |  (Express)  |
-+-------------+       { token: <JWT> }         +-------------+
-       |                                                 |
-       |  GET /user/me with Authorization: Bearer <JWT>  |
-       |------------------------------------------------>|
-       |                                                 |
-       | <-----------------------------------------------|
-       |        { auth: true, user: { ... } }            |
-       +-------------------------------------------------+
+<img width="588" height="321" alt="image" src="https://github.com/user-attachments/assets/25feeed3-b5c3-4d45-a4e3-927cb1e69f44" />
 
 ### License
 MIT
